@@ -6,6 +6,7 @@ import NavBar from "./components/NavBar";
 import About from "./components/About";
 import Page404 from "./components/Page404";
 import User from "./components/User";
+import Filter from "./components/Filter";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/user/:name" element={<User />} />
+          <Route path="/filter" element={<Filter />} />
           <Route path="*" element={<Page404 />} />
         </Routes>
       </BrowserRouter>

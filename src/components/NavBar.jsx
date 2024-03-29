@@ -27,6 +27,17 @@ const NavBar = () => {
             About
           </NavLink>
         </li>
+        <li>
+          <NavLink
+            style={({ isActive }) => {
+              return { color: isActive ? "skyblue" : null };
+            }}
+            className="nav-bar-link"
+            to="/filter"
+          >
+            Filter
+          </NavLink>
+        </li>
       </ul>
     </div>
   );
