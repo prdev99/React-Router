@@ -13,6 +13,23 @@
   }
 }
 
+.navbar {
+  text-align: right;
+}
+
+.navbar li{
+  display: inline-block;
+  padding: 10px 5px;
+}
+
+.nav-bar-link{
+  color: rgb(93, 2, 92);
+  text-decoration: none;
+}
+
+.nav-bar-link:hover{
+  color: green
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
