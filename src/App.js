@@ -11,6 +11,9 @@ import Contact from "./components/Contact";
 import Company from "./components/Company";
 import Channel from "./components/Channel";
 import Other from "./components/Other";
+import Login from "./components/Login";
+import Protected from "./components/Protected";
+import { Component } from "react";
 
 function App() {
   return (
@@ -18,10 +21,11 @@ function App() {
       <BrowserRouter>
         <NavBar />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/" element={<Protected Component={Home} />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/about" element={<Protected Component={About} />} />
           <Route path="/user/:name" element={<User />} />
-          <Route path="/filter" element={<Filter />} />
+          <Route path="/filter" element={<Protected Component={Filter} />} />
           <Route path="*" element={<Page404 />} />
           <Route path="/contact/" element={<Contact />}>
             <Route path="company" element={<Company />} />
