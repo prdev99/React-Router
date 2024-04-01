@@ -33,6 +33,17 @@ const NavBar = () => {
               return { color: isActive ? "skyblue" : null };
             }}
             className="nav-bar-link"
+            to="/contact"
+          >
+            Contact
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            style={({ isActive }) => {
+              return { color: isActive ? "skyblue" : null };
+            }}
+            className="nav-bar-link"
             to="/filter"
           >
             Filter
