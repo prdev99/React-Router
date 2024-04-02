@@ -14,15 +14,23 @@ import Other from "./components/Other";
 import Login from "./components/Login";
 import Protected from "./components/Protected";
 import { Component } from "react";
+import ProductList from "./components/ProductList";
+import ProductShow from "./components/ProductShow";
+import ProductCreate from "./components/ProductCreate";
+import Demo from "./components/Demo";
 
 function App() {
   return (
     <div className="App">
+      <Demo />
       <BrowserRouter>
         <NavBar />
         <Routes>
           <Route path="/" element={<Protected Component={Home} />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/products" element={<ProductList />} />
+          <Route path="/product" element={<ProductCreate />} />
+          <Route path="/product/:id" element={<ProductShow />} />
           <Route path="/about" element={<Protected Component={About} />} />
           <Route path="/user/:name" element={<User />} />
           <Route path="/filter" element={<Protected Component={Filter} />} />
